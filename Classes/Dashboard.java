@@ -1,3 +1,6 @@
+package Classes;
+
+import User_class.User;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;

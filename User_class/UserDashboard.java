@@ -1,3 +1,10 @@
+package User_class;
+
+import User_class.User;
+import Classes.Payment;
+import Classes.Login;
+import Classes.Login;
+import Classes.Payment;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -18,7 +25,7 @@ public class UserDashboard implements ActionListener {
         frame.setSize(600, 400);
         frame.setLayout(new BorderLayout());
 		
-		ImageIcon img = new ImageIcon("bg.jpg"); // Load the local image
+		ImageIcon img = new ImageIcon("Images/bg.jpg"); // Load the local image
         JLabel background = new JLabel("", img, JLabel.CENTER);
         background.setBounds(0, 0, 600, 400); // Set size to match the frame
         frame.add(background);
@@ -262,7 +269,7 @@ public class UserDashboard implements ActionListener {
 
     private void updateUserDataFile(User user) {
         try {
-            File file = new File("userdata.txt");
+            File file = new File("Data/userdata.txt");
             if (!file.exists()) {
                 JOptionPane.showMessageDialog(frame, "User data file not found!");
                 return;
@@ -295,4 +302,5 @@ public class UserDashboard implements ActionListener {
    
 
    
+
 }

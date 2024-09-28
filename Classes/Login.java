@@ -1,9 +1,13 @@
+package Classes;
+
+import User_class.UserDashboard;
+import User_class.User;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 
-class Login implements ActionListener {
+public class Login implements ActionListener {
     private JFrame frame;
     private JTextField emailField;
     private JPasswordField passwordField;
@@ -13,7 +17,7 @@ class Login implements ActionListener {
         frame.setSize(600, 400);
         frame.setLayout(null);
 		
-		ImageIcon img = new ImageIcon("bg.jpg"); // Load the local image
+		ImageIcon img = new ImageIcon("Images/bg.jpg"); // Load the local image
         JLabel background = new JLabel("", img, JLabel.CENTER);
         background.setBounds(0, 0, 600, 400); // Set size to match the frame
         frame.add(background);
@@ -97,7 +101,7 @@ class Login implements ActionListener {
 
     private User authenticateUser(String email, String password) {
         try {
-            File file = new File("userdata.txt");
+            File file = new File("Data/userdata.txt");
             if (!file.exists()) {
                 JOptionPane.showMessageDialog(frame, "No user registered yet!");
                 return null;

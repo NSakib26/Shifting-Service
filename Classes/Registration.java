@@ -1,3 +1,7 @@
+package Classes;
+
+import User_class.User;
+import Classes.Login;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -14,7 +18,7 @@ class Registration implements ActionListener {
         frame.setSize(600, 400);
         frame.setLayout(null);
 		
-        ImageIcon img1 = new ImageIcon("bg1.jpg"); // Load the local image
+        ImageIcon img1 = new ImageIcon("Images/bg1.jpg"); // Load the local image
         JLabel background = new JLabel("", img1, JLabel.CENTER);
         background.setBounds(0, 0, 600, 400); // Set size to match the frame
         frame.add(background);
@@ -123,7 +127,7 @@ class Registration implements ActionListener {
         User newUser = new User(name, email, password, gender);
 
         try {
-            FileWriter writer = new FileWriter("userdata.txt", true);
+            FileWriter writer = new FileWriter("Data/userdata.txt", true);
             writer.write(newUser.getName() + "," + newUser.getEmail() + "," + newUser.getPassword() + "," + newUser.getGender() + "\n");
             writer.close();
             JOptionPane.showMessageDialog(frame, "Registration Successful!");
@@ -136,7 +140,7 @@ class Registration implements ActionListener {
 
     private boolean isEmailExists(String email) {
         try {
-            File file = new File("userdata.txt");
+            File file = new File("Data/userdata.txt");
             if (!file.exists()) {
                 return false;
             }

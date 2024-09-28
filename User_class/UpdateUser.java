@@ -1,3 +1,8 @@
+package User_class;
+
+
+import Classes.Login;
+import Classes.Login;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -6,12 +11,12 @@ import java.io.*;
 public class UpdateUser {
     private JFrame frame;
     private JTextField nameField, emailField, passwordField, genderField;
-    private String userEmail;
-    private ManageUsers manageUsers;
+    private final String userEmail;
+    //private ManageUsers manageUsers;
 
-    public UpdateUser(String userEmail, ManageUsers manageUsers) {
+    public UpdateUser(String userEmail) {
         this.userEmail = userEmail;
-        this.manageUsers = manageUsers;
+       // this.manageUsers = manageUsers;
         initialize();
     }
 
@@ -108,7 +113,7 @@ public class UpdateUser {
 
     private void loadUserData() {
         try {
-            File file = new File("userdata.txt");
+            File file = new File("Data/userdata.txt");
             if (!file.exists()) {
                 JOptionPane.showMessageDialog(frame, "No users registered yet!");
                 return;
@@ -143,7 +148,7 @@ public class UpdateUser {
         }
 
         try {
-            File file = new File("userdata.txt");
+            File file = new File("Data/userdata.txt");
             if (!file.exists()) {
                 JOptionPane.showMessageDialog(frame, "No users registered yet!");
                 return;
@@ -168,7 +173,7 @@ public class UpdateUser {
 
             JOptionPane.showMessageDialog(frame, "User information updated successfully!");
             frame.dispose();
-            manageUsers.displayUsers(); // Refresh the user data in ManageUsers
+            //manageUsers.displayUsers(); // Refresh the user data in ManageUsers
         } catch (IOException ex) {
             ex.printStackTrace();
         }

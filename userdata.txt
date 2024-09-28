@@ -1,8 +1,0 @@
-sakib,sakib,sakib,Male
-Nazmus,nazmus,1234,Male
-ns,ns,ns,Male
-zerin,zerin,zeroin,Male
-aman,aman,aman,Male
-nafisa,nafisa,nafisa,Female
-Nazmus Sakib,ns@gmail.com,ns,Male
-tamim,sakibal,hasan,Male

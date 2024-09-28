@@ -1,3 +1,7 @@
+package Classes;
+
+
+import Classes.BkashPay;
 import javax.swing.*;
 import java.util.HashMap;
 
@@ -8,7 +12,8 @@ public class Payment {
     public Payment(HashMap<String, Double> services) {
         this.services = services;
         this.totalAmount = 0.0;
-        calculateTotal();
+        
+		calculateTotal();
     }
 
 
@@ -41,13 +46,15 @@ public class Payment {
         if (confirm == JOptionPane.YES_OPTION) {
            
 		   
-		   JOptionPane.showMessageDialog(null, "Payment Successful!", "Payment", JOptionPane.INFORMATION_MESSAGE);
+		   //JOptionPane.showMessageDialog(null, "Payment Successful!", "Payment", JOptionPane.INFORMATION_MESSAGE);
 		   
 
-		   // new Bkash();
+		    new BkashPay();
 		   
         } else {
             JOptionPane.showMessageDialog(null, "Payment Canceled!", "Payment", JOptionPane.WARNING_MESSAGE);
         }
     }
 }
+ 
+ 

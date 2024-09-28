@@ -1,5 +1,6 @@
-import java.lang.*;
-class User {
+package User_class;
+
+public class User {
     private String name;
     private String email;
     private String password;
